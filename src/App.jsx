@@ -10,7 +10,7 @@ import {
 import './assets/css/style.scss';
 import { List, Add } from './pages';
 
-function Application() {
+function App() {
   return (
     <Provider>
       <BrowserRouter>
@@ -29,4 +29,4 @@ function Application() {
   );
 }
 
-export default hot(module)(Application);
+export default hot(module)(App);

@@ -5,14 +5,15 @@
   "repository": "git@github.com:jliu1992/react-unstated-proj-template.git",
   "author": "liujie <jliu1992@outlook.com>",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "cross-env NODE_ENV=development && parcel index.html",
+    "build": "cross-env NODE_ENV=production && parcel build index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.10.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
