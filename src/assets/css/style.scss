@@ -1,0 +1,38 @@
+body {
+  padding: 20px;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  background-color: #eee;
+
+  a {
+    margin-right: 20px;
+  }
+}
+
+.list {
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      span {
+        flex: 1;
+      }
+
+      i {
+        color: #ffaa88;
+        cursor: pointer;
+      }
+    }
+  }
+}
