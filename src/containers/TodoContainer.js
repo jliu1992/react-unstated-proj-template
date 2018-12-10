@@ -11,38 +11,24 @@ class TodoContainer extends Container {
     };
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
-    this.markTodo = this.markTodo.bind(this);
   }
 
   addTodo(todo) {
+    this.id += 1;
     const newTodo = {
-      id: this.id++,
+      id: this.id,
       marked: false,
       description: todo,
     };
-    this.setState({
-      todos: [...this.state.todos, newTodo],
-    });
+    this.setState(state => ({
+      todos: [...state.todos, newTodo],
+    }));
   }
 
   removeTodo(id) {
-    this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== id),
-    });
-  }
-
-  markTodo(id) {
-    this.setState({
-      todos: this.state.todos.map((todo) => {
-        if (todo.id !== id) {
-          return todo;
-        }
-        return {
-          ...todo,
-          marked: !todo.marked,
-        };
-      }),
-    });
+    this.setState(state => ({
+      todos: state.todos.filter(todo => todo.id !== id),
+    }));
   }
 }
 

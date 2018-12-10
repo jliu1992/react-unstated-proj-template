@@ -16,8 +16,14 @@ function App() {
       <BrowserRouter>
         <div>
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="/add">Add</Link>
+            <Link to="/">
+              List
+              <i className="icon-home3" />
+            </Link>
+            <Link to="/add">
+              Add
+              <i className="icon-camera" />
+            </Link>
           </nav>
           <Switch>
             <Route exact path="/" component={List} />
